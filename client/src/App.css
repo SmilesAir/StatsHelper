@@ -1,0 +1,9 @@
+.topContainer {
+    display: flex;
+    flex-direction: column;
+
+    .playerContainer {
+        display: flex;
+        flex-direction: row;
+    }
+}
