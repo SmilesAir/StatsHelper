@@ -5,5 +5,44 @@
     .playerContainer {
         display: flex;
         flex-direction: row;
+
+        .playerElement {
+            border: 1px black solid;
+        }
+
+        .highlight {
+            border: 2px red solid;
+        }
+    }
+
+    .eventContainer {
+        border: black solid;
+        border-width: 1px 0 0 1px;
+        width: 22em;
+
+        .eventEntryContainer {
+            display: flex;
+            flex-direction: row;
+
+            .number {
+                width: 2em;
+                border: black solid;
+                border-width: 0 1px 1px 0;
+            }
+
+            .name {
+                width: 12em;
+                border: black solid;
+                border-width: 0 1px 1px 0;
+                padding-left: .3em;
+            }
+
+            .move {
+                width: 10em;
+                border: black solid;
+                border-width: 0 1px 1px 0;
+                padding-left: .3em;
+            }
+        }
     }
 }

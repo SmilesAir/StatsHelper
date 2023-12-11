@@ -1,0 +1,32 @@
+Catch %
+
+Count
+    throws
+        clock
+        counter
+        UD
+    catch drop
+    catch completes
+    drops
+    1x spin
+    2x spin
+    3x spin
+    pulls
+    passes
+    moves
+
+A - Clock Throw
+S - Counter Throw
+D - Drop
+F - Catch
+Shift - UD
+
+1 - 1x Spin
+2 - 2x Spin
+3 - 3x Spin
+
+Q - Pull
+W - Pass
+
+Space - Any Move
+
