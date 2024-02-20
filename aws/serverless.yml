@@ -1,0 +1,64 @@
+# serverless.yml
+service: stats-helper
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+  region: us-west-2
+  stage: ${opt:stage, "development"}
+  lambdaHashingVersion: 20201221
+
+  environment:
+    STATS_TABLE: ${self:service}-${self:provider.stage}-statsTable
+
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - dynamodb:PutItem
+            - dynamodb:DeleteItem
+            - dynamodb:QueryItem
+            - dynamodb:GetItem
+          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.STATS_TABLE}"
+
+functions:
+  setStatsData:
+    handler: source/main.setStatsData
+    events:
+      - http:
+          path: setStatsData/{eventKey}/poolKey/{poolKey}/playersKeys/{playersKeys}
+          method: post
+          cors: true
+  getStatsData:
+    handler: source/main.getStatsData
+    events:
+      - http:
+          path: getStatsData/{eventKey}/poolKey/{poolKey}/playersKeys/{playersKeys}
+          method: get
+          cors: true
+
+resources:
+  Resources:
+    eventTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        BillingMode: PAY_PER_REQUEST
+        TableName: ${self:provider.environment.STATS_TABLE}
+        AttributeDefinitions:
+          - AttributeName: key
+            AttributeType: S
+        KeySchema:
+          - AttributeName: key
+            KeyType: HASH
+
+plugins:
+  - fullstack-serverless
+  - ./public-policy-workaround.js
+
+
+custom:
+  fullstack:
+    bucketName: deployed-bucket
+    distributionFolder: ../client/dist
+    indexDocument: index.html
