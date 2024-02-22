@@ -1,0 +1,31 @@
+body {
+    background-color: transparent;
+}
+
+.displayBase {
+    background-color: rgba(105, 179, 249, 0.5);
+    border-radius: 1em;
+    padding: .5em;
+}
+
+.teamContainer {
+    font-size: 5vw;
+}
+
+.poolContainer {
+    font-size: 2.5vw;
+
+    .title {
+        font-weight: bold;
+        font-size: 3vw;
+        margin-bottom: 1em;
+    }
+
+    .name {
+        font-weight: bold;
+    }
+
+    .statsString {
+        margin-bottom: .25em;
+    }
+}

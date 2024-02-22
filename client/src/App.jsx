@@ -19,7 +19,10 @@ const inputMode = "instant"
 
 const eventDataUrl = "https://xf4cu1wy10.execute-api.us-west-2.amazonaws.com/production/getEventData/"
 const playerDataUrl = "https://4wnda3jb78.execute-api.us-west-2.amazonaws.com/production/getAllPlayers"
-const awsPath = import.meta.env.DEV ? " https://vxen9xoj97.execute-api.us-west-2.amazonaws.com/development/" : "https://wyach4oti8.execute-api.us-west-2.amazonaws.com/production/"
+const awsPath = import.meta.env.DEV ? " https://vxen9xoj97.execute-api.us-west-2.amazonaws.com/development/" : "https://tjl4cgwhm4.execute-api.us-west-2.amazonaws.com/production/"
+
+const testRecordedData = '[[{"playerIndex":1,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":0,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":0,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":1,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":0,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":1,"inputData":{"button":"d","instantButton":[["d"],["l"],["e","o"]],"name":"Drop"}},{"playerIndex":0,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":0,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":1,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":1,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":1,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":1,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":1,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":1,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":0,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":1,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":1,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":1,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":1,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":1,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":1,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":1,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":1,"inputData":{"button":"d","instantButton":[["d"],["l"],["e","o"]],"name":"Drop"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}}],[{"playerIndex":1,"inputData":{"button":"a","name":"Clock Throw"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","name":"Catch"}},{"playerIndex":0,"inputData":{"button":"a","name":"Clock Throw"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","name":"Catch"}},{"playerIndex":0,"inputData":{"button":"a","name":"Clock Throw"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":1,"inputData":{"button":"f","name":"Catch"}},{"playerIndex":1,"inputData":{"button":"s","name":"Counter Throw"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","name":"Catch"}},{"playerIndex":0,"inputData":{"button":"a","name":"Clock Throw"}},{"playerIndex":1,"inputData":{"button":"f","name":"Catch"}},{"playerIndex":1,"inputData":{"button":"a","name":"Clock Throw"}},{"playerIndex":1,"inputData":{"button":"f","name":"Catch"}},{"playerIndex":0,"inputData":{"button":"a","name":"Clock Throw"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","name":"Catch"}},{"playerIndex":0,"inputData":{"button":"a","name":"Clock Throw"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":1,"inputData":{"button":"d","name":"Drop"}},{"playerIndex":0,"inputData":{"button":"a","name":"Clock Throw"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":1,"inputData":{"button":"f","name":"Catch"}},{"playerIndex":0,"inputData":{"button":"a","name":"Clock Throw"}},{"playerIndex":1,"inputData":{"button":"d","name":"Drop"}},{"playerIndex":0,"inputData":{"button":"a","name":"Clock Throw"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":1,"inputData":{"button":"f","name":"Catch"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","name":"Catch"}},{"playerIndex":0,"inputData":{"button":"a","name":"Clock Throw"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":1,"inputData":{"button":"f","name":"Catch"}},{"playerIndex":1,"inputData":{"button":"a","name":"Clock Throw"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","name":"Catch"}},{"playerIndex":0,"inputData":{"button":"a","name":"Clock Throw"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":"s","name":"Counter Throw"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","name":"Catch"}}]]'
+const testRawData = '[{"playerIndex":1,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":0,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":0,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":1,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":0,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":1,"inputData":{"button":"d","instantButton":[["d"],["l"],["e","o"]],"name":"Drop"}},{"playerIndex":0,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":0,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":1,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":1,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":1,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":1,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":1,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":1,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":0,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":1,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":1,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":1,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":1,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":1,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":1,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":1,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":1,"inputData":{"button":"d","instantButton":[["d"],["l"],["e","o"]],"name":"Drop"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}}]'
 
 function postData(url, data) {
     return fetch(url, {
@@ -380,18 +383,14 @@ const App = observer(class App extends React.Component {
 
     getStatsString(dataArray) {
         if (dataArray !== undefined && dataArray.length > 0) {
-            let clockCount = 0
-            let counterCount = 0
+            let throwCount = 0
             let catchCount = 0
             let dropCount = 0
             let moveCount = 0
             for (let e of dataArray) {
                 switch (e.inputData.name) {
-                    case allInputData.clockThrow.name:
-                        ++clockCount
-                        break
-                    case allInputData.counterThrow.name:
-                        ++counterCount
+                    case allInputData.throw.name:
+                        ++throwCount
                         break
                     case allInputData.catch.name:
                         ++catchCount
@@ -405,20 +404,18 @@ const App = observer(class App extends React.Component {
                 }
             }
 
-            const throwCount = clockCount + counterCount
-
-            return `CW/CCW: ${this.getNormalized(clockCount, counterCount)} ` +
-                `Throws: ${throwCount} ` +
-                `Catch: ${this.getNormalized(throwCount, throwCount - (throwCount - dropCount))} ` +
+            return `Throws: ${throwCount} | ` +
+                `Catch %: ${this.getNormalized(throwCount, throwCount - (throwCount - dropCount))} | ` +
                 `Moves: ${moveCount}`
         }
 
-        return "CW/CCW: 0"
+        return "No Stats Data"
     }
 
     getTeamElement() {
+        console.log(JSON.stringify(recordedData.raw))
         return (
-                <div className="teamContainer">
+                <div className="displayBase teamContainer">
                     {this.getStatsString(recordedData.raw)}
                 </div>
             )
@@ -438,13 +435,26 @@ const App = observer(class App extends React.Component {
 
                         teamElements.push(
                             <div>
-                                <div>{namesString}</div>
-                                <div>{this.getStatsString(dataArray)}</div>
+                                <div className="name">{namesString}</div>
+                                <div className="statsString">{this.getStatsString(dataArray)}</div>
                             </div>
                         )
                     }
 
-                    return teamElements
+                    let poolParts = stateData.eventData.eventState.activePoolKey.split("|")
+                    let poolString = `${poolParts[2]} ${poolParts[3]}`
+                    if (poolParts[3] !== "Finals") {
+                        poolString += " " + poolParts[4]
+                    }
+
+                    return (
+                        <div className="displayBase poolContainer">
+                            <div className="title">
+                                {`${stateData.eventData.eventName} - ${poolString}`}
+                            </div>
+                            {teamElements}
+                        </div>
+                    )
                 }
             }
         }
