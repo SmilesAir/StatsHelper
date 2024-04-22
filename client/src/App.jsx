@@ -11,18 +11,15 @@ if (import.meta.hot) {
     );
 }
 
-const eventKey = "abb5ce86-7547-4e40-ac5f-e14853c22cc9"
+const eventKey = "77427e49-792c-4a8e-b0e1-7577a47dd36e"
 const queryString = window.location.search
 const urlParams = new URLSearchParams(queryString)
 const mode = urlParams.get("mode")
-const inputMode = "instant"
 
 const eventDataUrl = "https://xf4cu1wy10.execute-api.us-west-2.amazonaws.com/production/getEventData/"
 const playerDataUrl = "https://4wnda3jb78.execute-api.us-west-2.amazonaws.com/production/getAllPlayers"
-const awsPath = import.meta.env.DEV ? " https://vxen9xoj97.execute-api.us-west-2.amazonaws.com/development/" : "https://tjl4cgwhm4.execute-api.us-west-2.amazonaws.com/production/"
-
-const testRecordedData = '[[{"playerIndex":1,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":0,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":0,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":1,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":0,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":1,"inputData":{"button":"d","instantButton":[["d"],["l"],["e","o"]],"name":"Drop"}},{"playerIndex":0,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":0,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":1,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":1,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":1,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":1,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":1,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":1,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":0,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":1,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":1,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":1,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":1,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":1,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":1,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":1,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":1,"inputData":{"button":"d","instantButton":[["d"],["l"],["e","o"]],"name":"Drop"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}}],[{"playerIndex":1,"inputData":{"button":"a","name":"Clock Throw"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","name":"Catch"}},{"playerIndex":0,"inputData":{"button":"a","name":"Clock Throw"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","name":"Catch"}},{"playerIndex":0,"inputData":{"button":"a","name":"Clock Throw"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":1,"inputData":{"button":"f","name":"Catch"}},{"playerIndex":1,"inputData":{"button":"s","name":"Counter Throw"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","name":"Catch"}},{"playerIndex":0,"inputData":{"button":"a","name":"Clock Throw"}},{"playerIndex":1,"inputData":{"button":"f","name":"Catch"}},{"playerIndex":1,"inputData":{"button":"a","name":"Clock Throw"}},{"playerIndex":1,"inputData":{"button":"f","name":"Catch"}},{"playerIndex":0,"inputData":{"button":"a","name":"Clock Throw"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","name":"Catch"}},{"playerIndex":0,"inputData":{"button":"a","name":"Clock Throw"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":1,"inputData":{"button":"d","name":"Drop"}},{"playerIndex":0,"inputData":{"button":"a","name":"Clock Throw"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":1,"inputData":{"button":"f","name":"Catch"}},{"playerIndex":0,"inputData":{"button":"a","name":"Clock Throw"}},{"playerIndex":1,"inputData":{"button":"d","name":"Drop"}},{"playerIndex":0,"inputData":{"button":"a","name":"Clock Throw"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":1,"inputData":{"button":"f","name":"Catch"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","name":"Catch"}},{"playerIndex":0,"inputData":{"button":"a","name":"Clock Throw"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":1,"inputData":{"button":"f","name":"Catch"}},{"playerIndex":1,"inputData":{"button":"a","name":"Clock Throw"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","name":"Catch"}},{"playerIndex":0,"inputData":{"button":"a","name":"Clock Throw"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":"s","name":"Counter Throw"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":" ","name":"Move"}},{"playerIndex":1,"inputData":{"button":" ","name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","name":"Catch"}}]]'
-const testRawData = '[{"playerIndex":1,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":0,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":0,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":1,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":0,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":1,"inputData":{"button":"d","instantButton":[["d"],["l"],["e","o"]],"name":"Drop"}},{"playerIndex":0,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":0,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":1,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":1,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":1,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":1,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":1,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":1,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":0,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":1,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":1,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":1,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":1,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":1,"inputData":{"button":"a","instantButton":[["a"],["j"],["q","u"]],"name":"Throw"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":1,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":1,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}},{"playerIndex":0,"inputData":{"button":"s","instantButton":[["s"],["k"],["w","i"]],"name":"Catch"}},{"playerIndex":1,"inputData":{"button":"d","instantButton":[["d"],["l"],["e","o"]],"name":"Drop"}},{"playerIndex":0,"inputData":{"button":"f","instantButton":[["f"],[";"],["r","p"]],"name":"Move"}}]'
+//const awsPath = import.meta.env.DEV ? "https://vxen9xoj97.execute-api.us-west-2.amazonaws.com/development/" : "https://tjl4cgwhm4.execute-api.us-west-2.amazonaws.com/production/"
+const awsPath = "https://vxen9xoj97.execute-api.us-west-2.amazonaws.com/development/"
 
 function postData(url, data) {
     return fetch(url, {
@@ -156,18 +153,20 @@ function getPlayersKeys() {
 
 window.addEventListener("keydown", function(event) {
     runInAction(() => {
-        if (event.key == "ArrowLeft") {
+        let isInstant = stateData.inputMode === "instant"
+        if (!isInstant && event.key == "ArrowLeft") {
             stateData.isPlayerRecording[0] = true
-        } else if (event.key == "ArrowDown") {
+        } else if (!isInstant && event.key == "ArrowDown") {
             stateData.isPlayerRecording[1] = true
-        } else if (event.key == "ArrowRight") {
+        } else if (!isInstant && event.key == "ArrowRight") {
             stateData.isPlayerRecording[2] = true
-        } else if (event.key == "ArrowUp") {
+        } else if (event.key == "ArrowUp" || (isInstant && event.key === " ")) {
+            event.preventDefault()
             onDeleteLastEvent()
         } else {
             for (let key in allInputData) {
                 let inputData = allInputData[key]
-                if (inputMode === "instant") {
+                if (stateData.inputMode === "instant") {
                     for (let [playerIndex, buttonArray] of inputData.instantButton.entries()) {
                         for (let button of buttonArray) {
                             if (button === event.key.toLocaleLowerCase()) {
@@ -252,15 +251,15 @@ const allInputData = {
         instantButton: [["s"], ["k"], ["w", "i"]],
         name: "Catch"
     },
-    move: {
-        button: "f",
-        instantButton: [["f"], [";"], ["r", "p"]],
-        name: "Move"
-    },
     drop: {
         button: "d",
         instantButton: [["d"], ["l"], ["e", "o"]],
         name: "Drop"
+    },
+    move: {
+        button: "f",
+        instantButton: [["f"], [";"], ["r", "p"]],
+        name: "Move"
     }
 }
 
@@ -269,8 +268,11 @@ let stateData = observable({
     isUD: false,
     playerData: [],
     poolRecordedData: [],
-    eventData: undefined
+    eventData: undefined,
+    inputMode: "instant"
 })
+
+stateData.inputMode = urlParams.get("inputMode") || "instant" // instant, arrow
 
 const ButtonElement = observer(class ButtonElement extends React.Component {
     constructor(props) {
@@ -280,9 +282,19 @@ const ButtonElement = observer(class ButtonElement extends React.Component {
     }
 
     render() {
+        let buttonName = "N/A"
+        if (stateData.inputMode === "instant") {
+            if (this.props.playerIndex < this.inputData.instantButton.length) {
+                buttonName = this.inputData.instantButton[this.props.playerIndex].map((button) => button.toUpperCase()).join(", ")
+            } else {
+                buttonName = "N/A"
+            }
+        } else {
+            buttonName = this.inputData.button.toUpperCase()
+        }
         return (
             <div>
-                <button>{`${this.inputData.button.toUpperCase()} - ${this.inputData.name}`}</button>
+                <button>{`${buttonName} - ${this.inputData.name}`}</button>
             </div>
         )
     }
@@ -297,7 +309,7 @@ const PlayerElement = observer(class PlayerElement extends React.Component {
         let elements = []
         for (let key in allInputData) {
             let inputData = allInputData[key]
-            elements.push(<ButtonElement key={key} inputData={inputData} />)
+            elements.push(<ButtonElement key={key} inputData={inputData} playerIndex={this.props.playerIndex} />)
         }
 
         return elements
@@ -373,40 +385,79 @@ const App = observer(class App extends React.Component {
         })
     }
 
-    getNormalized(a, b) {
+    getNormalized(a, b, reverse) {
         if (a + b === 0) {
             return "0"
         }
 
-        return (a / (a + b)).toFixed(2).toString().replace("0.", ".")
+        let num = a / (a + b)
+        num = reverse ? 1 - num : num
+
+        return num.toFixed(2).toString().replace("0.", ".")
     }
 
-    getStatsString(dataArray) {
+    getMultiPlayerStatString(counts, playerCount) {
+        return counts.slice(0, playerCount).join("/")
+    }
+
+    getMultiPlayerCatchPercString(catchCounts, dropCounts, playerCount) {
+        let numbers = []
+        for (let i = 0; i < playerCount; ++i) {
+            let catchCount = catchCounts[i]
+            console.log(i, catchCount, dropCounts[i])
+            numbers.push(Math.round(this.getNormalized(catchCount, dropCounts[i]) * 100))
+        }
+
+        return this.getMultiPlayerStatString(numbers, playerCount)
+    }
+
+    getStatsString(dataArray, isPerPlayer) {
         if (dataArray !== undefined && dataArray.length > 0) {
-            let throwCount = 0
-            let catchCount = 0
-            let dropCount = 0
-            let moveCount = 0
+            let totalThrowCount = 0
+            let totalCatchCount = 0
+            let totalDropCount = 0
+            let totalMoveCount = 0
+            let throwCounts = [0, 0, 0]
+            let catchCounts = [0, 0, 0]
+            let dropCounts = [0, 0, 0]
+            let moveCounts = [0, 0, 0]
             for (let e of dataArray) {
                 switch (e.inputData.name) {
                     case allInputData.throw.name:
-                        ++throwCount
+                        ++totalThrowCount
+                        ++throwCounts[e.playerIndex]
+
+                        ++totalMoveCount
+                        ++moveCounts[e.playerIndex]
                         break
                     case allInputData.catch.name:
-                        ++catchCount
+                        ++totalCatchCount
+                        ++catchCounts[e.playerIndex]
+
+                        ++totalMoveCount
+                        ++moveCounts[e.playerIndex]
                         break
                     case allInputData.drop.name:
-                        ++dropCount
+                        ++totalDropCount
+                        ++dropCounts[e.playerIndex]
                         break
                     case allInputData.move.name:
-                        ++moveCount
+                        ++totalMoveCount
+                        ++moveCounts[e.playerIndex]
                         break
                 }
             }
 
-            return `Throws: ${throwCount} | ` +
-                `Catch %: ${this.getNormalized(throwCount, throwCount - (throwCount - dropCount))} | ` +
-                `Moves: ${moveCount}`
+            if (isPerPlayer === true) {
+                let playerCount = getTeamData().players.length
+                return `Throws ${this.getMultiPlayerStatString(throwCounts, playerCount)} | ` +
+                    `Catch % ${this.getMultiPlayerCatchPercString(catchCounts, dropCounts, playerCount)} | ` +
+                    `Moves ${this.getMultiPlayerStatString(moveCounts, playerCount)}`
+            } else {
+                return `Throws: ${totalThrowCount} | ` +
+                    `Catch %: ${this.getNormalized(totalThrowCount, totalThrowCount - (totalThrowCount - totalDropCount)) * 100} | ` +
+                    `Moves: ${totalMoveCount}`
+            }
         }
 
         return "No Stats Data"
@@ -436,7 +487,7 @@ const App = observer(class App extends React.Component {
                         teamElements.push(
                             <div>
                                 <div className="name">{namesString}</div>
-                                <div className="statsString">{this.getStatsString(dataArray)}</div>
+                                <div className="statsString">{this.getStatsString(dataArray, true)}</div>
                             </div>
                         )
                     }
@@ -462,6 +513,14 @@ const App = observer(class App extends React.Component {
         return <div>No Pool Data</div>
     }
 
+    toggleInputMode() {
+        if (stateData.inputMode === "instant") {
+            stateData.inputMode = "arrow"
+        } else {
+            stateData.inputMode = "instant"
+        }
+    }
+
     render() {
         if (mode === "team") {
             return this.getTeamElement()
@@ -471,6 +530,7 @@ const App = observer(class App extends React.Component {
             return (
                 <div className="topContainer">
                     <h2>Stats Helper</h2>
+                    <button onClick={() => this.toggleInputMode()}>{stateData.inputMode}</button>
                     <div className="playerContainer">
                         {this.getPlayerElements()}
                     </div>
